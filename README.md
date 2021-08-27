@@ -6,7 +6,9 @@
 kops create cluster --zones=eu-central-1a test.cluster.kluctl.io --networking cni
 kops update cluster --name test.clusters.kluctl.io --yes --admin
 ```
+
 Now wait...
+
 2. Update `clusters/` directory with your own cluster (e.g. copy test.cluster.kluctl.io.yml and replace cluster and context names)
 3. Use kluctl to manage addons:
 ```
