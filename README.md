@@ -3,13 +3,13 @@
 ## Using this PoC
 1. Deploy a naked kops cluster (with networking set to cni):
 ```shell
-kops create cluster --zones=eu-central-1a test.cluster.kluctl.io --networking cni
+kops create cluster --zones=eu-central-1a test.clusters.kluctl.io --networking cni
 kops update cluster --name test.clusters.kluctl.io --yes --admin
 ```
 
 Now wait...
 
-2. Update `clusters/` directory with your own cluster (e.g. copy test.cluster.kluctl.io.yml and replace cluster and context names)
+2. Update `clusters/` directory with your own cluster (e.g. copy test.clusters.kluctl.io.yml and replace cluster and context names)
 3. Use kluctl to manage addons:
 ```
 # will initially complain about missing namespaces
@@ -20,7 +20,7 @@ kluctl deploy --cluster test.clusters.kluctl.io
 ```
 4. Now pretend that we upgrade/modify some addons
 ```
-# modify something, e.g. enable/disable hubble-ui (in clusters/test.cluster.kluctl.io.yml)
+# modify something, e.g. enable/disable hubble-ui (in clusters/test.clusters.kluctl.io.yml)
 
 # Do a diff to check what would change
 kluctl diff --cluster test.clusters.kluctl.io
