@@ -1,0 +1,4 @@
+
+kustomizeDirs:
+- path: metrics-server
+- path: cert-manager

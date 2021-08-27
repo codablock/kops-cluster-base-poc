@@ -1,0 +1,8 @@
+# Can be used everywhere via { { test_dict.test_var }} (please note the extra space between the {...it is here to avoid
+# jinja kicking in inside the example...The space is not required/allowed when you actually use it.
+test_dict:
+  test_var: value
+
+# See ../example-guestbook/deployment.yml and ../example-guestbook/namespaces/namespace.yml
+guestbook:
+  namespace: guestbook

@@ -1,0 +1,18 @@
+# This file is usually meant to be provided by the user of kluctl (usually it's not even part of the deployment repo
+# itself and lives in a dedicated clusters repo so that it can be shared between deployments), but for kops integration
+# it might sense to auto-generate it and store it inside a configmap, so that kluctl can then grab it from there.
+# The file could also just be created temporarely by some kops component on the cluster so that kluctl can be invoked
+# automatically when needed.
+
+cluster:
+  name: test.clusters.kluctl.io
+  context: test.clusters.kluctl.io
+
+  cni:
+    cilium:
+      enabled: true
+      hubble:
+        relay:
+          enabled: true
+        ui:
+          enabled: true

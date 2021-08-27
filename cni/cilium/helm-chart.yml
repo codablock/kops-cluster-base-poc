@@ -1,0 +1,7 @@
+helmChart:
+  repo: https://helm.cilium.io/
+  chartName: cilium
+  chartVersion: 1.10.3
+  releaseName: cilium
+  namespace: kube-system
+  output: deploy.yml

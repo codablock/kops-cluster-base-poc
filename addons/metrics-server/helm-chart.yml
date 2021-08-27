@@ -1,0 +1,7 @@
+helmChart:
+  repo: https://charts.bitnami.com/bitnami
+  chartName: metrics-server
+  chartVersion: 5.8.13
+  releaseName: metrics-server
+  namespace: kube-system
+  output: deploy.yml

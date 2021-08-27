@@ -1,0 +1,7 @@
+kustomizeDirs:
+  - path: namespaces
+  - barrier: true
+  - path: redis
+  - path: guestbook
+
+overrideNamespace: {{ guestbook.namespace }}

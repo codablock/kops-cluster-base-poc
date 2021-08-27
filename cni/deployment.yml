@@ -1,0 +1,6 @@
+# cni plugins get enabled/disabled here with the help of jinja2 templating. For now it's only cilium...
+
+kustomizeDirs:
+{% if cluster.cni.cilium.enabled %}
+  - path: cilium
+{% endif %}

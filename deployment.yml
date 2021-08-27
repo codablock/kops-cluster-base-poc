@@ -1,0 +1,22 @@
+
+# Just some example vars included here. They are available in all included deployments via jinja2 templating
+vars:
+- file: vars/example-vars.yml
+
+includes:
+- path: cni
+# wait for objects to be created before continuing (this is currently not enough, as it does not wait for stuff to actually become green)
+- barrier: true
+- path: addons
+# This does not belong here, but is to demonstrate kluctl a little bit
+- path: example-guestbook
+
+
+# This configures how kluctl should mark objects in a way that it knows they belong to this deployment. It is later
+# used to identify purgable/deletable objects
+commonLabels:
+  kops.io/kluctl-cluster-base: "{{ cluster.name }}"
+
+# Actual labels to be used for identifications when deleting/purging. Should be the same as commonLabels.
+deleteByLabels:
+  kops.io/kluctl-cluster-base: "{{ cluster.name }}"

@@ -1,0 +1,10 @@
+operator:
+  rollOutPods: true
+
+hubble:
+  relay:
+    enabled: {{ cluster.cni.cilium.hubble.relay.enabled }}
+    rollOutPods: true
+  ui:
+    enabled: {{ cluster.cni.cilium.hubble.ui.enabled }}
+    rollOutPods: true

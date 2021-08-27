@@ -1,0 +1,11 @@
+# copied from kops addon
+extraArgs:
+  kubelet-insecure-tls: true
+  kubelet-preferred-address-types: InternalIP,Hostname,ExternalIP
+
+tolerations:
+  - key: CriticalAddonsOnly
+    operator: Exists
+
+apiService:
+  create: true
