@@ -16,3 +16,10 @@ cluster:
           enabled: true
         ui:
           enabled: true
+
+  # Try to enable/disable stuff here and see what "kluctl diff/deploy" does.
+  addons:
+    cert_manager:
+      enabled: true
+    metrics_server:
+      enabled: false

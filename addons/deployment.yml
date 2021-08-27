@@ -1,4 +1,8 @@
 
 kustomizeDirs:
+{% if cluster.addons.metrics_server.enabled %}
 - path: metrics-server
+{% endif %}
+{% if cluster.addons.cert_manager.enabled %}
 - path: cert-manager
+{% endif %}

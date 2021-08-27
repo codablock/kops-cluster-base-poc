@@ -34,6 +34,7 @@ kluctl purge --cluster test.clusters.kluctl.io
 5. Try to enable the guestbook application by commenting it in inside the root `deployment.yml` and retry 4. This
 should of course not be part of a kops addons deployment, but it shows (in a very simplified/naive way) how
 users can later deploy their own applications (in case they decide to use kluctl as well).
+You can also try enabling/disabling addons via the cluster yml.
 6. Integrate this into kops and let it happen magically :)
 
 ## Further infos/documentation
