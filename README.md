@@ -41,7 +41,7 @@ users can later deploy their own applications (in case they decide to use kluctl
 I've put some comments into the deployment.yml other files. I'd also recommend to read the documentation found
 [here](https://github.com/codablock/kluctl).
 
-The way kluctl is used in this PoC differs a little bit in what is described/recommended in the dods, 
+The way kluctl is used in this PoC differs a little bit in what is described/recommended in the docs, 
 as we do not use a .kluctl.yml here but instead provide the cluster name directly via arguments.
 
 ## Helm charts used here
